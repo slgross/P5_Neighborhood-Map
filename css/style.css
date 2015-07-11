@@ -1,0 +1,64 @@
+
+#mapcontent{
+	height: 100%;
+}
+
+h3 {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 20px;
+	background-color: MintCream;
+	color: Black;
+}
+.bg{
+	width: 275px;
+	height: 160px;
+}
+body{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.infoBubble{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-size: 1.2em;
+}
+
+.places{
+	height: 200px;
+	width: 300px;
+	float: left;
+	position: absolute;
+	z-index: 1;
+	top: 50px;
+	left: 10px;
+	font-size: 1.2em;
+}
+
+
+input, textarea{
+	background-color: #DBF0F9;
+	color: #FFF;
+}
+
+ul{
+	list-style-type: none;
+	padding: 10px;
+	margin: 10px;
+	background-color: Navy;
+	color: MintCream;
+	line-height: 28px;
+}
+
+li:hover{
+	background: MediumSlateBlue;
+}
+
+.selected {
+	background: MediumBlue;
+}
+
