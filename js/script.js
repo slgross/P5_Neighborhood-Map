@@ -192,7 +192,7 @@ var Octpus_View	= function(){
 				var result = [];
 				if (data.id == 6)
 				{
-					result.push('<li><a href"'+"http://www.zillow.com/homes/map/36-Bellevue-Ave-Rumson-NJ-07760_rb/"+'"target="_blank">'+"Springsteen Hut"+'</a></li>');
+					result.push('<li><a href="'+"http://www.zillow.com/homes/map/36-Bellevue-Ave-Rumson-NJ-07760_rb/"+'"target="_blank">'+"Springsteen Hut"+'</a></li>');
 				}
 				if (data.id == 3)
 				{
