@@ -1,51 +1,65 @@
 
-#mapcontent{
-	height: 100%;
-}
-
-h3 {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: 20px;
-	background-color: MintCream;
-	color: Black;
-}
-.bg{
-	width: 275px;
-	height: 160px;
-}
-body{
+body,
+html {
 	height: 100%;
 	padding: 0;
 	margin: 0;
 }
 
-.infoBubble{
+.infoBubble {
 	padding: 0;
 	margin: 0;
 	border: 0;
 	font-size: 1.2em;
 }
 
-.places{
+.places {
 	height: 200px;
 	width: 300px;
 	float: left;
+	z-index: 5;
+	top: 56px;
 	position: absolute;
-	z-index: 1;
-	top: 50px;
-	left: 10px;
+	overflow: auto;
+	margin-left: 2%;
 	font-size: 1.2em;
 }
 
-
-input, textarea{
-	background-color: #DBF0F9;
-	color: #FFF;
+.map-canvas {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	padding: 0;
 }
 
-ul{
+h3 {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	margin-left: 3%;
+	background-color: #dbf0f9;
+	color: Black;
+
+}
+
+.placesBtn {
+	float: left;
+	z-index: 5;
+	top: 80%;
+}
+
+.bg {
+ 	width: 275px;
+ 	height: 160px;
+}
+
+input,
+textarea {
+	background-color: black;
+	color: MintCream;
+}
+
+ul {
 	list-style-type: none;
 	padding: 10px;
 	margin: 10px;
@@ -54,11 +68,11 @@ ul{
 	line-height: 28px;
 }
 
-li:hover{
-	background: MediumSlateBlue;
+li:hover {
+	background: lime;
+	color: black;
 }
 
 .selected {
 	background: MediumBlue;
 }
-

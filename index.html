@@ -1,36 +1,46 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
+<!doctype html>
+<html lang="en">
 
-<HEAD>
-<TITLE> Sandys Neighborhood </TITLE>
-<META name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<META NAME="author" content="Sandy Gross">
-<META NAME="Description" CONTENT="Display Neighborhood Map: Using APIs">
+<head>
+<title> Sandys Neighborhood </title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+<meta name="author" content="Sandy Gross">
+<meta name="Description" content="Neighborhood Map: Using APIs">
 
 	<!--  stylesheets -->
 	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
-</HEAD>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
 
-<BODY>  <!-- Using Knockout HTML for data binding -->
+<body>  <!-- Using Knockout HTML for data binding -->
 
-	<h3> Search My Neighborhood </h3>
-	<div id="places" class="hidden-xs places">  	
-	<ul data-bind="foreach: searchPlaces"> 
-		<li data-bind="text: $data.name, click: $parent.setCurrentPlace, css: {selected: $data.selected() > 0}">
-		</li> 
-	</ul>
-
+	<div id="places" class="hidden-xs places">
+		<ul data-bind="foreach: searchPlaces">
+		<li data-bind="text: $data.name, click: $parent.setCurrentPlace, css: {selected: $data.selected() > 0}"></li>
+		</ul>
+		 <!-- Create and use the search box -->
+		<ul>
+			<form action="#">
+		<!-- KO "value" binding "keyup" - updates the view model when a key released -->
+				<input class="search" style="width: 250px" placeholder="Search: Press Enter to refresh" type="search" name="search" data-bind="value: searchBox, valueUpdate: 'keyup'" autocomplete="off">
+			</form>
+		</ul>
 	</div>
 
-	<div id="mapcontent"></div>
+	<h3> Search My Neighborhood </h3>
+	<!--for search box -->
+	<button type="button" id="placesBtn" class="btn-default visible-xs btn-md placesBtn">menu</button>
 
-<!-- load up scripts -->
-<script src="./js/jquery.js"></script> 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ48xczCL_BJXgCdBlE_xdThOx_af14VE"></script> 
-<script src="./jslibs/knockout-3.3.0.js"></script> 
-<script src="./jslibs/infobubble.js"></script> 
-<script src="./js/script.js"></script> 
+	<div class="map-canvas"></div>
 
-</BODY>
-</HTML>
+<!-- load up scripts (with my Google key) -->
+<script src="./js/jquery.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ48xczCL_BJXgCdBlE_xdThOx_af14VE"></script>
+<script src="./jslibs/knockout-3.3.0.js"></script>
+<script src="./jslibs/infobubble.js"></script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>
